@@ -1,0 +1,636 @@
+body, html{
+
+    height:100%;
+    margin:0;
+    font-family: 'BenchNine', sans-serif;
+    line-height:1.8em;
+    scroll-behavior: smooth;
+}
+*,*:before,*:after{
+    box-sizing: border-box;
+}
+
+.logo{                                                                /*INCONNU LOGO*/
+  
+  height: 50%;
+  width: 100%;
+  padding: 1em;
+  padding-top: 14rem;
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+  animation-name: fadeInDown;
+  animation-duration: 2s;
+  animation-delay: 1.5s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+
+  opacity: 0;
+  z-index: 2;
+}
+.logo img{
+  height:12rem;
+  padding: 20px;
+
+}
+@media (max-width: 400px) {
+  .logo {
+    height: 20%;
+    width: 100%;
+    padding: 0.5em;
+    padding-top: 8rem;
+  }
+}
+@media (max-width: 400px) {
+.logo img {
+    max-width: 8rem;
+    max-height: 8rem;
+}
+}
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -20%, 0);
+    transform: translate3d(0, -20, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+}
+
+.parallax{                                            /*parallax shit on da header*/
+    height:800px;
+    width: auto;
+    background-color: aliceblue;
+}
+@media (max-width: 450px) {
+  .parallax{
+      height: 250px;
+      padding: 2px;
+      width: auto;
+  }
+}
+@media (max-width: 550px) {
+  .parallax{
+      height: 250px;
+      padding: 2px;
+      width: auto;
+  }
+}
+.front{
+    position: absolute;
+    min-height:auto;
+    width: 100%;
+    top: 7%;
+    z-index: 0;
+}
+@media (max-width: 450px) {
+  .front{
+    top: 13%;
+    height: auto;
+    padding: 2px;
+    width: 100%;
+  }
+}
+
+.welcome_hello{
+    height: 200px;
+    width: 100%;
+    font-size:52px;
+    word-spacing: 0.5rem;
+    letter-spacing: 1rem;
+    padding: 2em;
+    text-align: center;
+    background-color: black;
+    position: center;
+    color: white;
+}
+@media (max-width: 450px) {
+  
+  .welcome_hello{
+    width: 100%;
+    height: auto;
+    font-size: 20px;
+    word-spacing: 0rem;
+    padding: 0.5em;
+  }
+}
+@media (max-width: 550px) {
+  
+  .welcome_hello{
+    width: 100%;
+    height: auto;
+    font-size: 35px;
+  }
+}
+@media (max-width: 750px) {
+  
+  .welcome_hello{
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media(max-width:450px){
+    .selfpic img{
+      display: grid;
+      width: 200px;
+      height: auto;
+  }
+    .personalinfo ul{
+    display: flex;
+    flex-direction: column;
+      padding: 20px;
+      font-size: 16px;
+      width: 300px;
+      height: auto;
+    }
+    .personalinfo{
+    display: flex;
+    flex-direction: column;
+      display: relative;
+      height:600px;
+      width: auto;
+      padding: 20px;
+    }
+}
+@media(max-width:550px){
+  .selfpic img{
+    display: grid;
+    width: 200px;
+    height: auto;
+}
+  .personalinfo ul{
+  display: flex;
+  flex-direction: column;
+    padding: 20px;
+    font-size: 16px;
+    width: 300px;
+    height: auto;
+  }
+  .personalinfo{
+  display: flex;
+  flex-direction: column;
+    display: relative;
+    height:600px;
+    width: auto;
+    padding: 20px;
+  }
+}
+#aboutme{
+    padding: 20px;
+}                                    
+#aboutme, .navbar{                                                                                  /*LOADIN ANIMATION: NAVBAR & ABOUTME->>>*/
+    animation: animationFrames ease 3.5s;             /* 3.5second a fédelés ideje midnenhol*/
+    animation-iteration-count: 1;
+    transform-origin: 50% 50%;
+    animation-fill-mode:forwards; /*when the spec is finished*/
+    -webkit-animation: animationFrames ease 3.5s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-transform-origin: 50% 50%;
+    -webkit-animation-fill-mode:forwards; /*Chrome 16+, Safari 4+*/ 
+    -moz-animation: animationFrames ease 3.5s;
+    -moz-animation-iteration-count: 1;
+    -moz-transform-origin: 50% 50%;
+    -moz-animation-fill-mode:forwards; /*FF 5+*/
+    -o-animation: animationFrames ease 3.5s;
+    -o-animation-iteration-count: 1;
+    -o-transform-origin: 50% 50%;
+    -o-animation-fill-mode:forwards; /*Not implemented yet*/
+    -ms-animation: animationFrames ease 3.5s;
+    -ms-animation-iteration-count: 1;
+    -ms-transform-origin: 50% 50%;
+    font-size: 32px;
+  }
+  .navbar{
+    background-color:white;
+    text-shadow: 2px 2px 2px #252525;
+  }
+  
+  
+  @keyframes animationFrames{
+    0% {
+      opacity:0;
+      transform:  translate(0px,-40px)  ;           /* -40 érték a fentről elfel fédelés táv */
+    }
+    100% {
+      opacity:1;
+      transform:  translate(0px,0px)  ;
+    }
+  }
+  @-moz-keyframes animationFrames{
+    0% {
+      opacity:0;
+      -moz-transform:  translate(0px,-40px)  ;
+    }
+    100% {
+      opacity:1;
+      -moz-transform:  translate(0px,0px)  ;
+    }
+  }
+  
+  @-webkit-keyframes animationFrames {
+    0% {
+      opacity:0;
+      -webkit-transform:  translate(0px,-40px)  ;
+    }
+    100% {
+      opacity:1;
+      -webkit-transform:  translate(0px,0px)  ;
+    }
+  }
+  
+  @-o-keyframes animationFrames {
+    0% {
+      opacity:0;
+      -o-transform:  translate(0px,-40px)  ;
+    }
+    100% {
+      opacity:1;
+      -o-transform:  translate(0px,0px)  ;
+    }
+  }
+  
+  @-ms-keyframes animationFrames {
+    0% {
+      opacity:0;
+      -ms-transform:  translate(0px,-40px)  ;
+    }
+    100% {
+      opacity:1;
+      -ms-transform:  translate(0px,0px)  ;
+    }
+  }
+
+  .scrolled{
+    background-color:#000000;
+    transition: background-color 500ms ease-in-out;
+    color: white;
+  }
+
+  @media (max-width: 400px) {
+    .navbar {
+        max-height: auto;
+        display: flexbox;
+        padding: 5px 10px;
+        justify-content: space-around;
+        font-size: 22px;
+    }
+  }
+  .nav-item a{
+    opacity: 1;
+    color:black;
+  } 
+
+.navbar a{
+    border-bottom: 3px solid transparent;
+    cursor:pointer;
+}
+
+.navbar a:hover {
+  border-bottom: 3px solid rgb(134, 0, 0)
+}
+
+  @media (max-width: 450px) {
+    .nav-item a{
+        opacity: 1;
+        color: rgb(255, 255, 255);
+    }
+  }
+  @media (min-width: 992px){
+    .navbar li {
+        margin-left : 1em;
+        margin-right : 1em;
+    }
+}
+
+
+  .pimg2{                                                       /* pimg2 & pimg4 */
+    background-image:url('img/CSAPO.jpg');
+    position:relative;
+    opacity:0.8;
+    height:450px;
+    background-position:center;
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    /*fixed = parallax scroll = normal*/
+  }
+  .pimg4{
+    background-image:url('img/INCONNU_background.png');
+    position:relative;
+    opacity:0.8;
+    height:650px;
+    background-position:center;
+    background-size: auto;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    /*fixed = parallax scroll = normal*/
+  }
+  @media(max-width:450px){
+    .pimg2,.pimg4{
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: auto;
+      height:300px;
+  }
+}
+@media(max-width:550px){
+  .pimg2,.pimg4{
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: auto;
+    height:300px;
+}
+}
+@media(max-width:650px){
+  .pimg2,.pimg4{
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: auto;
+    height:300px;
+  }
+}
+.iframe-container{
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; 
+  height: 0;
+}
+.iframe-container iframe{
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+  #skillz{                                                    /*Contains: skillz1*/
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    height: 700px;
+    padding: 60px;
+    margin:0 auto;
+    font-size: 35px;
+    background-image:url('img/csaj.jpg');
+    position:relative;
+    opacity:0.8;
+    height:450px;
+    background-position:center;
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    /*fixed = parallax scroll = normal*/
+  }
+
+  @media (max-width: 450px) {
+    #skillz{
+        display: flex;
+        height: 880px;
+        width: 100%;
+        padding: 5px 10px;
+        font-size: 16px;
+    }
+  }
+
+  @media (max-width: 550px) {
+    #skillz{
+        display: flex;
+        height: 980px;
+        width: 100%;
+        padding: 5px 10px;
+        font-size: 16px;
+    }
+  }
+
+  
+  .line{                                                      /* SKILLZ  LINE  */
+    height: 30px;
+    width: 500px;
+    margin:0 auto 10px;
+    line-height: 30px;
+    font-size: 20px;
+    color: white;
+    padding:0 0 0 10px;
+    position: relative;
+  }
+  @media (max-width: 450px) {
+    .line{
+      position: relative;
+      float: left;
+      width: 80%;
+      max-width: 300px;
+      max-height: auto;
+      padding: 5px 10px;
+      position: relative;
+    }
+  }
+  @media (max-width: 550px) {
+    .line{
+      position: relative;
+      float: left;
+      width: 80%;
+      max-width: 300px;
+      max-height: auto;
+      padding: 5px 10px;
+      position: relative;
+    }
+  }
+  .line:before{
+    content: '';
+    width: 100%;
+    position: absolute;
+    left: 0;
+    height: 30px;
+    top: 0;
+    z-index: -2;
+    background:white;
+  }
+  .line:after{
+    content: '';
+    background:#36abff;
+    height: 30px;
+    transition: 0.8s;
+    display: block;
+    width: 100%;
+    animation: animate 1 3s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  .line1:after{
+    max-width: 85%;
+  }
+  .line2:after{
+    max-width: 50%;
+  }
+  .line3:after{
+    max-width: 95%;
+  }
+  .line4:after{
+    max-width: 85%;
+  }
+  .line5:after{
+    max-width: 75%;
+  }
+
+  @keyframes animate {										 /* SKILLZ LINES ANIMATION */
+    0%{
+      width: 0;
+    }
+    100%{
+      width:100%;
+    }
+  }
+  .skillz1{                                                   /* SKILLZ 1 */
+    color: white;
+    display: block;
+    float: right;
+    width: 500px;
+    height:auto;
+    padding: 30px;
+    text-align: right;
+  }
+  @media (max-width: 450px) {
+    .skillz1{
+      position: absolute;
+      padding-top: 30px;
+      width: 400px;
+      height:auto;
+      text-align: center;
+    }
+  }
+  @media (max-width: 550px) {
+    .skillz1{
+      position: absolute;
+      padding-top: 450px;
+      width: 400px;
+      height:auto;
+      text-align: center;
+    }
+  }
+  
+  
+  .section{
+    height: auto;
+    width: 100%;
+    text-align:center;
+    padding:50px 80px;
+    
+  }
+  .section-dark{
+    background-image: url(img/INCONNU_background.png);
+    background-attachment: fixed;
+    background-size: cover;
+    font-size: 30px;
+  }
+  @media (max-width: 450px) {
+    #section2,#section4,.section-dark{
+      font-size: 16px;
+      padding: 2em;
+    }
+  }
+  @media (max-width: 550px) {
+    #section2,#section4,.section-dark{
+      font-size: 16px;
+      padding: 2em;
+    }
+  }
+  @media (max-width: 650px) {
+    #section2,#section4,.section-dark{
+      font-size: 16px;
+      padding: 2em;
+    }
+  }
+  
+  .posterfooter{
+    background-image:url('img/INCONNU_background.png');
+    position: absolute;
+    opacity:1;
+    height:650px;
+    background-position:center;
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+
+  }
+
+  .ptext{
+    position:absolute;
+    top:50%;
+    width:100%;
+    text-align:center;
+    color:#000;
+    font-size:30px;
+    letter-spacing:8px;
+    text-transform:uppercase;
+  }
+  
+  .border{
+    background-color:#111;
+    opacity:0.7;
+    color:#2284e0;
+    padding:10px;
+  }
+  
+  .border, .trans{
+    background-color:transparent;
+  }
+  .container-fluid{
+    padding-bottom: 60px;
+    background-color: #000;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  .footer{                                                      /*FOOTER*/
+    color: ivory;
+    font-size: 20px;
+  }
+  .footer h2{
+    font-size: 40px;
+  }
+  .footer-icons{
+    padding: 10px;
+  }
+  .footer-icons i{
+    padding: 5px;
+    color: white;
+  }
+  #scroll_reference{
+    background-image:url('img/scroll_reference_bg.png');
+    position:center;
+    opacity:1;
+    height:550px;
+    background-position:center;
+    background-size: contain;
+    background-repeat:no-repeat;
+    background-attachment:scroll;
+    /*fixed = parallax scroll = normal*/
+
+
+  }
+  #backtonav{
+    color: white;
+  }
+
+  .hr-style{
+    margin:1rem auto;
+  border: 0;
+  height: 2px;
+  color: white;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(255, 255, 255), rgba(0, 0, 0, 0));
+  }
+#website{                                                       /*WEBSITE FADEIN JS SHIT*/   
+  display: none;
+}
