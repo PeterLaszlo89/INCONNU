@@ -313,7 +313,11 @@ body, html{
         margin-right : 1em;
     }
 }
-
+@media (max-width: 450px) {
+  .nav-link{
+     width: 50%;
+  }
+}
 
   .pimg2{                                                       /* pimg2 & pimg4 */
     background-image:url('img/CSAPO.jpg');
@@ -529,12 +533,15 @@ body, html{
     padding:50px 80px;
     
   }
-  .section-dark{
-    background-image: url(img/INCONNU_background.png);
+
+  #section2{
+    background-image: url(img/section-dark_background.png);
     background-attachment: fixed;
     background-size: cover;
+    background-repeat: no-repeat;
     font-size: 30px;
   }
+
   @media (max-width: 450px) {
     #section2,#section4,.section-dark{
       font-size: 16px;
@@ -553,7 +560,7 @@ body, html{
       padding: 2em;
     }
   }
-  
+
   .posterfooter{
     background-image:url('img/INCONNU_background.png');
     position: absolute;
