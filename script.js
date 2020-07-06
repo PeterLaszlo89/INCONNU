@@ -21,28 +21,28 @@ $(function(){
 
     $("#skillzbutton").on("click", function(){
 
-        var skillzbutton = document.getElementById("skillz");
+        var skillzbutton = document.getElementById("section2");
 
         skillzbutton.scrollIntoView({
             block: "start"});
     });
     $("#aboutmebutton").on("click", function(){
 
-        var aboutmebutton = document.getElementById("aboutme");
+        var aboutmebutton = document.getElementById("scroll_info");
 
         aboutmebutton.scrollIntoView({
             block: "start"});
         });
     $("#referencebutton").on("click", function(){
 
-        var referencebutton = document.getElementById("scroll_reference");
+        var referencebutton = document.getElementById("trailer");
     
         referencebutton.scrollIntoView({
             block: "start"});
         });
     $("#infobutton").on("click", function(){
 
-        var infobutton = document.getElementById("scroll_info");
+        var infobutton = document.getElementById("scroll_reference");
         
         infobutton.scrollIntoView({
             block: "start"});
