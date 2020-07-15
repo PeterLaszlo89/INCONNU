@@ -424,14 +424,13 @@ body, html{
     display: flex;
     justify-content: flex-end;
     width: 100%;
-    height: 700px;
     padding: 60px;
     margin:0 auto;
     font-size: 35px;
     background-image:url('img/csaj.jpg');
     position:relative;
     opacity:0.8;
-    height:450px;
+    height:650px;
     background-position:center;
     background-size:cover;
     background-repeat:no-repeat;
@@ -463,10 +462,11 @@ body, html{
     color: white;
     display: block;
     float: right;
-    width: 500px;
-    height:auto;
+    width: 640px;
+    height:100%;
     padding: 30px;
     text-align: right;
+    font-size: 22px;
   }
   @media (max-width: 450px) {
     .skillz1{
