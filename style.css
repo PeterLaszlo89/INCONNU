@@ -382,7 +382,7 @@ body, html{
   .pimg4{
     background-image:url('img/INCONNU_background.png');
     position:relative;
-    opacity:0.8;
+    opacity:1;
     height:650px;
     background-position:center;
     background-size: auto;
