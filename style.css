@@ -3,7 +3,7 @@ body, html{
     height:100%;
     margin:0;
     font-family: 'BenchNine', sans-serif;
-    line-height:1.8em;
+    line-height:1.6em;
     scroll-behavior: smooth;
 }
 *,*:before,*:after{
@@ -252,6 +252,7 @@ body, html{
     -ms-animation-iteration-count: 1;
     -ms-transform-origin: 50% 50%;
     font-size: 32px;
+    line-height: 1.2;
   }
   .navbar{
     font-size: 20px;
@@ -441,9 +442,9 @@ body, html{
   @media (max-width: 450px) {
     #skillz{
         display: flex;
-        height: 480px;
+        height: 700px;
         width: 100%;
-        padding: 5px 10px;
+        padding: 4px 8px;
         font-size: 16px;
     }
   }
@@ -451,9 +452,9 @@ body, html{
   @media (max-width: 550px) {
     #skillz{
         display: flex;
-        height: 480px;
+        height: 700px;
         width: 100%;
-        padding: 5px 10px;
+        padding: 4px 8px;
         font-size: 16px;
     }
   }
@@ -462,7 +463,7 @@ body, html{
     color: white;
     display: block;
     float: right;
-    width: 640px;
+    width: 660px;
     height:100%;
     padding: 30px;
     text-align: right;
@@ -471,19 +472,21 @@ body, html{
   @media (max-width: 450px) {
     .skillz1{
       position: absolute;
-      padding-top: 50px;
-      width: 300px;
+      padding-top: 25px;
+      width: 340px;
       height:auto;
       text-align: center;
+      font-size: 16px;
     }
   }
   @media (max-width: 550px) {
     .skillz1{
       position: absolute;
-      padding-top: 50px;
-      width: 300px;
+      padding-top: 25px;
+      width: 360px;
       height:auto;
       text-align: center;
+      font-size: 16px;
     }
   }
   
@@ -494,6 +497,7 @@ body, html{
     text-align:center;
     padding:50px 80px;
     font-size: 32px;
+    line-height: 1.2;
   }
   @media (max-width: 450px) {
     .section{
@@ -507,6 +511,7 @@ body, html{
     background-size: cover;
     background-repeat: no-repeat;
     font-size: 32px;
+    line-height: 1.2;
   }
 
   @media (max-width: 450px) {
@@ -573,18 +578,32 @@ body, html{
   #scroll_reference{
     background-image:url('img/scroll_reference_bg.png');
     position:center;
-    opacity:1;
-    height:550px;
+    height:300px;
     background-position:center;
     background-size: contain;
     background-repeat:no-repeat;
     background-attachment:scroll;
     /*fixed = parallax scroll = normal*/
   }
-  @media (max-width: 550px) {
+
+  @media screen and  (max-width: 450px) {
     #scroll_reference{
-      height:350px;
-      font-size: 16px;
+      height: 150px;
+      width:auto;
+      text-align: center;
+    }
+  }
+  #copyright{
+    background-color: black;
+    background-position:center;
+    background-size: contain;
+    background-repeat:no-repeat;
+    line-height:2.5em;
+    font-size: 20px;
+  }
+  @media screen and  (max-width: 350px) {
+    #copyright{
+      font-size: 12px;
     }
   }
   #backtonav{
