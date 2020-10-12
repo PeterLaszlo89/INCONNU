@@ -465,7 +465,7 @@ body, html{
     float: right;
     width: 660px;
     height:100%;
-    padding: 30px;
+    padding: 1rem;
     text-align: right;
     font-size: 22px;
   }
